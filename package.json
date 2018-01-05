@@ -4,18 +4,15 @@
   "description": "Workshop de Programação Funcional =================",
   "main": "test.js",
   "scripts": {
-    "test": "mocha"
+    "test": "./node_modules/.bin/mocha"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/matheusml/workshop-fp.git"
+    "url": "https://github.com/daniiell3/workshop-fp.git"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/matheusml/workshop-fp/issues"
-  },
-  "homepage": "https://github.com/matheusml/workshop-fp",
+  "homepage": "https://github.com/daniiell3/workshop-fp",
   "devDependencies": {
     "mocha": "^2.4.5"
   }

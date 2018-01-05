@@ -3,7 +3,7 @@ Workshop de Programação Funcional
 
 Clone o projeto
 ```
-git clone https://github.com/matheusml/workshop-fp.git
+git clone https://github.com/daniiell3/workshop-fp.git
 ```
 
 Entre na pasta do projeto
@@ -11,14 +11,14 @@ Entre na pasta do projeto
 cd workshop-fp
 ```
 
-Instale o mocha
+Instale as dependencias
 ```
-npm install -g mocha
+npm install
 ```
 
 Rode os testes
 ```
-mocha
+npm test
 ```
 
 Ajuste os blocos de código no arquivo ```test.js``` para que os testes passem.
@@ -37,16 +37,14 @@ Exemplo:
 
 
 ```javascript
-var name = "Matheus";
+let name = "Matheus"
 
 // impura
-var helloName = function() {
-    name = "Olá " + name;
-    return name;
-};
+const helloName = () => {
+    name = `Olá ${name}`
+    return name
+}
 
 // pure
-var helloName = function(name) {
-    return "Olá " + name;
-};
+const helloName = (name) => `Olá ${name}`
 ```
