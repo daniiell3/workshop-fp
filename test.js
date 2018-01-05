@@ -5,7 +5,7 @@ const assert = require('assert')
 describe('Functional Programming Workshop', () => {
 
     describe('Pure Functions', () => {
-        it('returns the days in the month', function () {
+        it('returns the days in the month', () => {
             // impure
             const daysThisMonth = () => {
                 const date = new Date()
@@ -27,7 +27,7 @@ describe('Functional Programming Workshop', () => {
         })
 
         it('returns the increment', () => {
-            const counter = 0
+            let counter = 0
 
             // impure
             const increment = () => {
@@ -42,7 +42,7 @@ describe('Functional Programming Workshop', () => {
         })
 
         it('returns the square', () => {
-            const x = 10
+            let x = 10
 
             // impure
             const square = () => {
@@ -75,9 +75,9 @@ describe('Functional Programming Workshop', () => {
                 { name: 'Anna', grade: 6 },
                 { name: 'John', grade: 4 },
                 { name: 'Maria', grade: 9 }
-            ];
+            ]
 
-            let grades;
+            let grades
 
             assert.deepEqual(grades, [6, 4, 9])
         })
@@ -95,7 +95,7 @@ describe('Functional Programming Workshop', () => {
                 { name: 'Dog' }
             ]
 
-            let byNames;
+            let byNames
 
             assert.deepEqual(byNames(students), ['Anna', 'John', 'Maria'])
             assert.deepEqual(byNames(animals), ['Panda', 'Elephant', 'Dog'])
@@ -117,7 +117,7 @@ describe('Functional Programming Workshop', () => {
                 { name: 'Maria', grade: 9 }
             ]
 
-            let filterApprovedStudents;
+            let filterApprovedStudents
 
             assert.deepEqual(filterApprovedStudents,
                 [{ name: 'Anna', grade: 6 },
@@ -133,11 +133,11 @@ describe('Functional Programming Workshop', () => {
                 { name: 'Maria', grade: 9 }
             ]
 
-            let filterApprovedStudentsByName;
+            let filterApprovedStudentsByName
 
             assert.deepEqual(filterApprovedStudentsByName, ['Anna', 'Maria'])
-        });
-    });
+        })
+    })
 
     describe('Reduce', () => {
         it('returns the total sum', () => {
@@ -147,7 +147,7 @@ describe('Functional Programming Workshop', () => {
             }, 0)
 
             assert.equal(sum, 10)
-        });
+        })
 
         it('returns the combined names', () => {
             const students = [
@@ -156,7 +156,7 @@ describe('Functional Programming Workshop', () => {
                 { name: 'Maria', grade: 9 }
             ]
 
-            let combinedNames;
+            let combinedNames
 
             assert.equal(combinedNames, 'AnnaJohnMaria')
         })
@@ -189,7 +189,7 @@ describe('Functional Programming Workshop', () => {
             const filteredStudents = students.filter(filterGrade)
 
             assert.deepEqual(filteredStudents, [{ name: 'Maria', grade: 9 }])
-        });
+        })
 
         it('returns the calculation', () => {
             const sum = (x, y) => x + y
@@ -276,7 +276,7 @@ describe('Functional Programming Workshop', () => {
             let numberOfWords
 
             assert.deepEqual(numberOfWords('hello my friend'), 3)
-        });
+        })
 
         it('returns the "angry" reversed string', () => {
             const compose = (f, g) => {
